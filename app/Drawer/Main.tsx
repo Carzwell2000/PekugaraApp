@@ -6,7 +6,6 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { useNavigation, NavigationProp } from "@react-navigation/native";
 import { createClient } from "@supabase/supabase-js";
-import Header from "./Components/Header";
 
 const supabaseUrl = "https://aqlztcsukugmsztrrkau.supabase.co";
 const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFxbHp0Y3N1a3VnbXN6dHJya2F1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzc5NzQyMTgsImV4cCI6MjA1MzU1MDIxOH0.jjefq42swAHHFCfAjE66gDniK4fyJaYOl5iDNBfzmcc";
@@ -43,12 +42,11 @@ const Main: React.FC = () => {
   return (
     <ScrollView>
       <SafeAreaView style={tw`py-4`}>
-        <Header title="" />
 
         <View style={tw`mx-2 mt-4`}>
           <Text style={tw`text-black font-bold text-2xl`}>Get Your Favorite</Text>
           <Text style={tw`text-black font-bold text-xl`}>Accommodation!</Text>
-          
+
           <View style={tw`mt-10 w-full rounded-xl h-10 bg-gray-200 flex flex-row items-center px-2`}>
             <Ionicons name="search" size={20} color="gray" />
             <TextInput
@@ -64,10 +62,10 @@ const Main: React.FC = () => {
           <View style={tw`mt-10 px-2 py-4 bg-orange-600 w-full h-40 rounded-xl`}>
             <Text style={tw`text-white text-xl`}>Book Accommodation</Text>
             <Text style={tw`text-white text-xl`}>At Just A Tap</Text>
-            <TouchableOpacity onPress={() => navigation.navigate("Mzari")}> 
+            <TouchableOpacity onPress={() => navigation.navigate("Mzari")}>
               <Text style={tw`bg-[#303030] mt-8 w-40 text-center py-2 rounded-xl font-semibold text-4 text-white`}>View All Houses</Text>
             </TouchableOpacity>
-            <Image  source={require("../assets/images/house5.png")}  style={tw`absolute right-0 rounded-l-10 mt-8 w-30 h-32`} />
+            <Image source={require("../../assets/images/house5.png")} style={tw`absolute right-0 rounded-l-10 mt-8 w-30 h-32`} />
           </View>
 
           <Text style={tw`text-black text-xl pt-8`}>Recommended Houses</Text>
